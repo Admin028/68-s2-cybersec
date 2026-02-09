@@ -1,0 +1,12 @@
+services:
+  s2-app:
+    image: prawee/strapi:latest
+    container_name: 68-s2-app
+    ports:
+      - ${STRAPI_PORT}:1337
+    environment:
+      DATABASE_HOST: ${STRAPI_DATABASE_HOST}
+      DATABASE_PORT: ${STRAPI_DATABASE_PORT}
+      DATABASE_NAME: ${STRAPI_DATABASE_NAME}
+      DATABASE_USERNAME: ${STRAPI_DATABASE_USERNAME}
+      DATABASE_PASSWORD: ${STRAPI_DATABASE_PASSWORD}
